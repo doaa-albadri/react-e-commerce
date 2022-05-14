@@ -1,0 +1,44 @@
+.header-container {
+    background-color: 	#40B5AD;
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header-info  {
+    display: flex;
+    align-items: center;
+}
+
+.header-info label {
+    color: #ffffff;
+    margin-right: 40px;
+}
+
+.header-info i {
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        height: 40px;
+        justify-content: center;
+    }
+    .header-info {
+        display: none;
+    }
+    .logo {
+        font-weight: 600;
+        font-size: 15px;
+    }
+}
