@@ -3,7 +3,8 @@ import Footer from "../../layouts/footer";
 import Header from "../../layouts/header";
 import Navbar from "../../layouts/navbar";
 import Banner from "../../components/banner";
-import Card from "../../components/card";
+import TopCards from "../../components/topCards";
+import Products from "./products";
 
 const Home = () => {
   return (
@@ -11,8 +12,9 @@ const Home = () => {
       <Header />
       <Navbar />
       <Banner />
-      {/* <Card /> */}
-      <Footer />
+      <TopCards />
+      <Products />
+      {/* <Footer /> */}
     </>
   );
 };
