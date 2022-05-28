@@ -1,7 +1,7 @@
 import React from "react";
 import "./banner.css";
 import banner from "../../assets/images/banner.png";
-import Button from "../button";
+import Button from "../../UI/button";
 
 const Banner = (props) => {
   return (
