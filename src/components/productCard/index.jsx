@@ -1,7 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./productCard.css";
 
 const ProductCard = ({ details }) => {
+  const navigate = useNavigate();
+  const view = () => {
+    navigate("/product", { state: details });
+  };
   return (
     <div className="product-container">
       <div className="product-img-container">
@@ -21,7 +26,9 @@ const ProductCard = ({ details }) => {
         </div>
         <div>
           <h4 className="view">
-            <a href="#">View Product</a>
+            <a onClick={view} href="/product">
+              View Product
+            </a>
           </h4>
           <h4 className="add">Add to Cart</h4>
         </div>
