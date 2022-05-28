@@ -15,7 +15,7 @@ const TopCards = () => {
     <div className="card-container">
       {cards.map((card) => {
         return (
-          <div className="img-container">
+          <div key={card.title} className="img-container">
             <img src={card.image} />
             <div className="titles-div">
               <h4 className="title">{card.title}</h4>

@@ -16,7 +16,7 @@ const Sale = () => {
       <h2 className="div-title">ON SALE</h2>
       <div className="product-cards-container">
         {details.map((product) => {
-          return <ProductCard details={product} />;
+          return <ProductCard key={product.name} details={product} />;
         })}
       </div>
     </div>
