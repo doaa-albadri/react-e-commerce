@@ -1,0 +1,163 @@
+.p-container{
+    margin-top: 60px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.p-details-container {
+    height: 600px;
+    width: 70%;
+    background-color: 	
+    #f7f7f7;
+    box-shadow: 5px 5px 20px #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 8%;
+}
+
+.p-img img {
+    width: 100%;
+    height: 500px;
+    padding-left: 10%;
+}
+
+.p-info {
+    width: 50%;
+    padding-right: 4%;
+}
+
+.p-info h4 {
+    font-size: 20px;
+}
+
+.name-by {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 10px;
+}
+.name-brand {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.p-by {
+    color: rgb(189, 189, 189);
+}
+
+.p-brand {
+    color: #9f72cd;
+
+}
+
+.description {
+    margin-bottom: 10px;
+}
+
+.description h4 {
+    color: #9f72cd;
+}
+
+.p-price h4 {
+    color: rgb(189, 189, 189);
+
+}
+
+@media (max-width: 1100px) {
+.p-details-container {
+    height: 450px;
+}
+
+    .p-img img {
+        height: 370px;
+    }
+}
+
+@media (max-width: 900px) {
+    .p-info h4 {
+        font-size: 13px;
+    }
+    .description p {
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .p-details-container {
+        display: block;
+        height: 350px;
+    }
+    .p-info {
+        margin-top: 20px;
+        margin-left: 6%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        column-gap: 35%;
+    }
+    .p-info h4 {
+        font-size: 10px;
+    }
+    .p-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .p-img img {
+        padding-top: 5%;
+        width: 50%;
+        height: 220px;
+        padding-left: 0;
+    }
+    .name-brand {
+        display: block;
+        width: 60px;
+    }
+    .name-brand h4{
+        margin-bottom: 4px;
+    }
+    .name-by {
+        column-gap: 5px;
+    }
+    .p-by {
+        margin-right: 5px;
+    }
+    .description {
+        height: 50%;
+        width: 240px;
+        padding-right: 20%;
+        margin-right: 20px;
+    }
+    .description p {
+        font-size: 7px;
+        margin-top: 5px;
+    }
+    .p-price {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .p-info {
+        column-gap: 30%;
+    }
+    .p-info h4 {
+        font-size: 7px;
+    }
+    .p-by {
+        margin-right: 20px;
+    }
+    .description {
+        width: 180px;
+    }
+    .description p {
+        font-size: 6px;
+    }
+}
