@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./layouts/navbar";
 import Header from "./layouts/header";
-import Banner from "./components/banner";
+import Banner from "./layouts/banner";
 import TopCards from "./components/topCards";
 import Footer from "./layouts/footer";
 import Home from "./pages/Home";
