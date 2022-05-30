@@ -16,6 +16,7 @@ import Product from "./pages/Product";
 import Clothes from "./pages/Products/Clothes";
 import MakeUp from "./pages/Products/MakeUp";
 import Accessories from "./pages/Products/Accessories";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -31,8 +32,9 @@ function App() {
           <Route path="/clothes" element={<Clothes />} />
           <Route path="/makeup" element={<MakeUp />} />
           <Route path="/accessories" element={<Accessories />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );
