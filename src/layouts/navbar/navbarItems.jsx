@@ -11,7 +11,7 @@ const NavbarItems = () => {
           <a href="#">Shop</a>
         </li>
         <li>
-          <a href="#">Cart</a>
+          <a href="/cart">Cart</a>
         </li>
         <li>
           <a href="#">Account</a>
