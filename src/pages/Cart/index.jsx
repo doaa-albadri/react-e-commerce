@@ -1,21 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import Search from "../../components/search";
 import Table from "../../components/table";
 import "./cart.css";
-import dress1 from "../../assets/images/dress1.jpg";
-import dress2 from "../../assets/images/dress2.jpg";
-import brush1 from "../../assets/images/brush1.jpg";
 
-const Cart = () => {
-  const headers = ["Image", "Name", "Brand", "Price"];
-  const data = [
-    { Image: dress1, Name: "Dress 1", Brand: "Brand 1", Price: "100" },
-    { Image: dress2, Name: "Dress 2", Brand: "Brand 1", Price: "200" },
-    { Image: brush1, Name: "Brush 1", Brand: "Brand 1", Price: "300" },
-  ];
+const Cart = ({ data, setData, items }) => {
+  const headers = ["Image", "Name", "Brand", "Price", "Actions"];
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortTerm, setSortTerm] = useState("DSC");
+
+  const sort = (sortOption) => {
+    if (sortTerm === "ASC") {
+      const sorted = [...data].sort((a, b) => {
+        return a[sortOption] > b[sortOption] ? 1 : -1;
+      });
+      setData(sorted);
+      setSortTerm("DSC");
+    }
+    if (sortTerm === "DSC") {
+      const sorted = [...data].sort((a, b) => {
+        return a[sortOption] < b[sortOption] ? 1 : -1;
+      });
+      setData(sorted);
+      setSortTerm("ASC");
+    }
+  };
+
   return (
     <div className="cart-container">
-      <h2 className="cart-h">Cart</h2>
-      <Table headers={headers} data={data} />
+      <div className="title-container">
+        <h2 className="cart-h">Cart</h2>
+        <h4>Number of Items: {items}</h4>
+        {/* <div className="num-box">
+          <h2 className="cart-num">{items}</h2>
+        </div> */}
+      </div>
+      <div className="search-container">
+        <Search
+          data={data}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+        />
+        <button onClick={() => sort("Name")}>
+          <i class="fas fa-sort"></i>
+        </button>
+      </div>
+      <Table
+        searchTerm={searchTerm}
+        headers={headers}
+        data={data}
+        setData={setData}
+      />
     </div>
   );
 };

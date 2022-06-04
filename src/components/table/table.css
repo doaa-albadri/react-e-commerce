@@ -33,11 +33,19 @@
 .data-item {
     font-size: 14px;
     color: rgb(96, 96, 96);
+}
 
+.delete-item {
+    font-size: 12px;
+    color: rgb(225, 0, 0);
+}
+
+.delete-item:hover {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(225, 0, 0);
 }
 
 .data-item img {
     width: 40px;
     box-shadow: 5px 5px 20px #e5e5e5;
-
 }

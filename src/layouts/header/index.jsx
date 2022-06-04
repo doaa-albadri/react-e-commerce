@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="header-container">
       <header className="logo">E-Commerce</header>

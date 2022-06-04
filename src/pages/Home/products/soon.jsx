@@ -5,7 +5,7 @@ import brush1 from "../../../assets/images/brush1.jpg";
 import watch1 from "../../../assets/images/watch1.jpg";
 import lipstick1 from "../../../assets/images/lipstick1.jpg";
 
-const Soon = () => {
+const Soon = ({ data, setData }) => {
   const details = [
     { img: brush1, name: "Brush", brand: "Brand 7", price: "700" },
     { img: watch1, name: "Watch", brand: "Brand 8", price: "800" },
@@ -16,7 +16,14 @@ const Soon = () => {
       <h2 className="div-title">SOON</h2>
       <div className="product-cards-container">
         {details.map((product) => {
-          return <ProductCard key={product.name} details={product} />;
+          return (
+            <ProductCard
+              data={data}
+              setData={setData}
+              key={product.name}
+              details={product}
+            />
+          );
         })}
       </div>
     </div>

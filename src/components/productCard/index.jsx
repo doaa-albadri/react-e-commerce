@@ -2,11 +2,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./productCard.css";
 
-const ProductCard = ({ details }) => {
+const ProductCard = ({ data, setData, details, setItemsCount }) => {
   const navigate = useNavigate();
   const view = () => {
     navigate("/product", { state: details });
   };
+
   return (
     <div className="product-container">
       <div className="product-img-container">
@@ -30,7 +31,9 @@ const ProductCard = ({ details }) => {
               View Product
             </a>
           </h4>
-          <h4 className="add">Add to Cart</h4>
+          <h4 onClick={() => setData([...data, details])} className="add">
+            Add to Cart
+          </h4>
         </div>
       </div>
     </div>

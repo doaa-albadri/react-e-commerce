@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Search from "../../components/search";
 import "./navbar.css";
 import NavbarItems from "./navbarItems";
 
@@ -9,9 +10,7 @@ const Navbar = () => {
     <>
       <div className="navbar-container">
         <div className="search_toggle">
-          <div className="search">
-            <input type="search" placeholder="Search" />
-          </div>
+          <Search />
           <div>
             <a href="#" className="toggle-button">
               <i

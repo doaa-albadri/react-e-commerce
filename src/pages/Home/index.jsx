@@ -1,10 +1,10 @@
 import React from "react";
 import Products from "./products";
 
-const Home = () => {
+const Home = ({ data, setData, setItemsCount }) => {
   return (
     <>
-      <Products />
+      <Products setItemsCount={setItemsCount} data={data} setData={setData} />
     </>
   );
 };

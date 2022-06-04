@@ -1,11 +1,7 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import "./product.css";
 
-export const ProductDetails = () => {
-  const location = useLocation();
-  const details = location.state;
-
+export const ProductDetails = ({ details }) => {
   return (
     <div className="p-container">
       <div className="p-details-container">
