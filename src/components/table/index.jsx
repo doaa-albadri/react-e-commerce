@@ -1,6 +1,18 @@
 import React from "react";
 import "./table.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.min.css";
+
 const Table = ({ headers, data, setData, searchTerm }) => {
+  const notifySuccess = (msg) =>
+    toast.success(msg, {
+      position: toast.POSITION.TOP_CENTER,
+      closeButton: false,
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+    });
   return (
     <div className="table-container">
       <table className="table">
@@ -35,6 +47,7 @@ const Table = ({ headers, data, setData, searchTerm }) => {
                       onClick={() => {
                         data.splice(key, 1);
                         setData([...data]);
+                        notifySuccess("Item has been deleted.");
                       }}
                     >
                       Delete
@@ -45,6 +58,12 @@ const Table = ({ headers, data, setData, searchTerm }) => {
             })}
         </tbody>
       </table>
+      <ToastContainer
+        closeButton={false}
+        autoClose={3000}
+        hideProgressBar={false}
+        closeOnClick={true}
+      />
     </div>
   );
 };

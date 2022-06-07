@@ -30,9 +30,6 @@ const Cart = ({ data, setData, items }) => {
       <div className="title-container">
         <h2 className="cart-h">Cart</h2>
         <h4>Number of Items: {items}</h4>
-        {/* <div className="num-box">
-          <h2 className="cart-num">{items}</h2>
-        </div> */}
       </div>
       <div className="search-container">
         <Search
